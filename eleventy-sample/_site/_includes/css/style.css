@@ -1,0 +1,11 @@
+body {
+/*background: url("../img/bg.webp") no-repeat center bottom/cover;*/
+/*background-color: #F527E0; */ 
+	background-image: url('../img/bg.webp');
+
+}
+
+h1 {
+    color: #731A47; /* Couleur du texte des titres */
+}
+
