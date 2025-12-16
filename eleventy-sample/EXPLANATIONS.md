@@ -32,5 +32,6 @@ npm pkg set type = "module"
 | Node.js | C'est un environnement d'execution Javascript côté serveur. (Il permet d'éxecuter du code Javascript en dehors du navigateur, ce qui est utile au dvp) |
 | valeurs | Les valeurs par défaut sont des infos comme le nom du projet, la version, la description, etc. Ces valeurs peuvent être modifiées par la suite manuellement. |
 | Dépendances | Des bibliothèques ou des paquets dont le projet à besoin pour fonctionner |
+| module | Des morceaux / templates de code Javascript qui peuvent être importés et exportés entre différents fichiers. Permet de structurer le code de manière plus organisé. |
 
 
