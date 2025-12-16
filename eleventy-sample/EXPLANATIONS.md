@@ -19,7 +19,8 @@ npm init -y
   
 ```
 npm pkg set type = "module"
-
+```
+  
 * Cette commande définit le type de [module](#VOCABULAIRE) pour le projet en spécifiant l'utilisation des modules [Javascript](#VOCABULAIRE) (ESM)
 
 
