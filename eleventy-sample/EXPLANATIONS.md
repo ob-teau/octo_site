@@ -3,7 +3,7 @@
 | **Table des Matières** |
 |------------------------|
 | [I - Config Initiale](#I---Config-Initiale) |
- 
+| [Vocab](#VOCABULAIRE) | 
   
 
 
@@ -17,6 +17,8 @@ npm init -y
   
 `npm init -y` : Init un nouveau projet Node.js et crée un fichier package.json avec des valeurs par défaut. Le fichier package.json est essentiel pour gérer les dépendances du projet, et pour stocker des informations sur le projet.
 
+
+## VOCABULAIRE
 
 | **Vocab** |  |
 |-----------|---|
