@@ -21,7 +21,7 @@ npm init -y
 npm pkg set type = "module"
 ```
   
-* Cette commande définit le type de [module](#VOCABULAIRE) pour le projet en spécifiant l'utilisation des modules [Javascript](#VOCABULAIRE) (ESM)
+* Cette commande définit le type de [module](#VOCABULAIRE) pour le projet en spécifiant l'utilisation des modules [Javascript](#VOCABULAIRE) ([ESM](#VOCABULAIRE). Cela permet d'utiliser la syntaxe [import](#VOCABULAIRE) et [export](#VOCABULAIRE) du code Javascript (utile pour les projets modernes).
 
 
 ## VOCABULAIRE
@@ -31,8 +31,13 @@ npm pkg set type = "module"
 | npm | C'est le gestionnaire des paquets par défauts pour Nodes.js. Il permet d'installer, gerer, partager des paquets Javascript. |
 | Paquets | Peut contenir du code des ressources, des outils pouvant être utilisé dans le projet, les paquets sont installés avec npm |
 | Node.js | C'est un environnement d'execution Javascript côté serveur. (Il permet d'éxecuter du code Javascript en dehors du navigateur, ce qui est utile au dvp) |
+| Javascript | Langage de programmation principalement utilisé pour le dvp web. Permet d'ajouter aux pages web du dynamisme. |
 | valeurs | Les valeurs par défaut sont des infos comme le nom du projet, la version, la description, etc. Ces valeurs peuvent être modifiées par la suite manuellement. |
 | Dépendances | Des bibliothèques ou des paquets dont le projet à besoin pour fonctionner |
 | module | Des morceaux / templates de code Javascript qui peuvent être importés et exportés entre différents fichiers. Permet de structurer le code de manière plus organisé. |
+| ESM  | La spécificité standard de Javascript. Les modules ECMAScript (ESM) sont une façon moderne de gérer les dépendances et l'organisation du code en Javascript |
+| Syntaxe Import / Export | La manière dont on inclu des modules dans le code.  
+ex : `import {mafonction} from './monModule.js'`  
+`{mafonction}` : permet d'importer une fonction depuis un autre fichier (`./monModule.js`) |
 
 
