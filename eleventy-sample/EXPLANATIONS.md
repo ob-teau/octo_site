@@ -36,8 +36,6 @@ npm pkg set type = "module"
 | Dépendances | Des bibliothèques ou des paquets dont le projet à besoin pour fonctionner |
 | module | Des morceaux / templates de code Javascript qui peuvent être importés et exportés entre différents fichiers. Permet de structurer le code de manière plus organisé. |
 | ESM  | La spécificité standard de Javascript. Les modules ECMAScript (ESM) sont une façon moderne de gérer les dépendances et l'organisation du code en Javascript |
-| Syntaxe Import / Export | La manière dont on inclu des modules dans le code.  
-ex : `import {mafonction} from './monModule.js'`  
-`{mafonction}` : permet d'importer une fonction depuis un autre fichier (`./monModule.js`) |
+| Syntaxe Import / Export | La manière dont on inclu des modules dans le code. <br> ex : `import {mafonction} from './monModule.js'` <br> `{mafonction}` : permet d'importer une fonction depuis un autre fichier (`./monModule.js`) |
 
 
