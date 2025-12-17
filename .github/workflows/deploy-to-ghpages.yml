@@ -19,13 +19,13 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: "20"  # Version de Node.js à utiliser
+          node-version: "20"
 
       - name: Persist npm cache
         uses: actions/cache@v3
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('eleventy-sample/**/package.json') }}  # Chemin mis à jour
 
       - name: Persist Eleventy .cache
         uses: actions/cache@v3
@@ -33,14 +33,19 @@ jobs:
           path: ./.cache
           key: ${{ runner.os }}-eleventy-fetch-cache
 
-      - run: npm install
+      - name: Change directory to eleventy-sample
+        run: cd eleventy-sample  
 
-      - run: npm run build  # Commande pour construire le site
+      - run: npm install
+        working-directory: eleventy-sample  # Spécifiez le chemin
+
+      - run: npm run build
+        working-directory: eleventy-sample  # Spécifiez le chemin
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site  # Dossier contenant les fichiers générés
+          publish_dir: eleventy-sample/_site  # Chemin vers les fichiers générés
 
