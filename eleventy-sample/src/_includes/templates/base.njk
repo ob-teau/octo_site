@@ -1,19 +1,18 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="/_includes/css/style.css"> <!-- ICI à partir de "/src" -->
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
   <title>{{ title }}</title>
-  <link rel="stylesheet" href="/_includes/css/style.css"> <!-- ICI -->
+  <link rel="stylesheet" href="{{ '/_includes/css/style.css' | url }}"> <!-- ICI à partir de "/src" -->
 </head>
 <body>
   <header>
     <nav>
-      <a href="/">Accueil</a>
-      <a href="/Anim/">Animations</a>
-      <a href="/BTS/">Behind the scenes</a>
-      <a href="/Projects/">Projets</a>
-      <a href="/Forum/">Forum</a>
+      <a href="{{ '/' | url }}">Accueil</a>
+      <a href="{{ '/Anim/' | url }}">Animations</a>
+      <a href="{{ '/BTS/' | url }}">Behind the scenes</a>
+      <a href="{{ '/Projects/' | url }}">Projets</a>
+      <a href="{{ '/Forum/' | url }}">Forum</a>
     </nav>
   </header>
 
@@ -22,7 +21,7 @@
   </main>
 
   <footer>
-<!--    <p>© 2025 - Octo Lumia</p> -->
+    <!--    <p>© 2025 - Octo Lumia</p> -->
   </footer>
 </body>
 </html>
