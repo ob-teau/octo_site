@@ -1,4 +1,4 @@
-name: Build Eleventy
+name: Deploy 11ty octo_site
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main  # Utilise 'main' au lieu de 'master'
 
 jobs:
-  build:
+  build-deploy:
     runs-on: ubuntu-20.04
 
     strategy:
@@ -21,7 +21,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Install dependencies & build
+	  - run: npm install 
+      - name: Deploy to Github Pages
         run: |
           npm ci
           npm run build
