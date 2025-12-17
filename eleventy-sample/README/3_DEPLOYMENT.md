@@ -17,8 +17,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "eleventy --serve",
-    "serve": "npx @11ty/eleventy --serve",
-    "build-ghpages": "npx @11ty/eleventy --pathprefix=/octo_site/"
+    "build": "env NODE_ENV=production npx eleventy --pathprefix 'octo_site'",
+    "serve": "npx @11ty/eleventy --serve"
   },
   "keywords": [],
   "author": "",
@@ -31,6 +31,6 @@
 }
 ```
   
-`"build": "env NODE_ENV=production npx eleventy --pathprefix 'octo_site'",`: ajout de cette ligne pour lancer Eleventy avec le préfixe de chemin 
+`"build": "env NODE_ENV=production npx eleventy --pathprefix 'octo_site'",`: ajout de cette ligne qui sert à générer le site avec Eleventy en mode production tout en spécifiant le préfixe de chemin (`'octo_site'`)  pour les fichiers générés, ce qui est utile si le site est accesible via un sous répertoire comme `octo_site`. Cela permet également d'appliquer des optimisations pécifiques à l'environnement de production.
 
 
