@@ -22,8 +22,43 @@ npm pkg set type = "module"
 ```
   
 * Cette commande définit le type de [module](#VOCABULAIRE) pour le projet en spécifiant l'utilisation des modules [Javascript](#VOCABULAIRE) ([ESM](#VOCABULAIRE). Cela permet d'utiliser la syntaxe [import](#VOCABULAIRE) et [export](#VOCABULAIRE) du code Javascript (utile pour les projets modernes).
+  
+  
+```
+npm install @11ty/eleventy
+```
+  
+* Install 11ty en tant que dépendance du projet.
+  
+  
+```
+npx @11ty/eleventy
+```
+  
+* Utilisation de [npx](#VOCABULAIRE) pour executer 11ty pour la premiere fois. Ce qui génère les fichiers de base nécessaire pour démarrer.  
+  
 
-
+```
+echo '<!doctype html><title> Page title </title><p> Hi </p>' > index.html
+```
+  
+* Cette commande crée un fichier index.html avec un contenu HTML de base. C'est la page d'accueil du site. En ajoutant du contenu on peut commencer à construire le site.
+  
+  
+```
+echo '#Heading' > README.md
+```
+  
+* Crée un fichier README.md pour documenter le projet.
+  
+  
+```
+npx @11ty/eleventy --serve
+```
+  
+* Execute 11ty en mode serveur (permet de voir le site en direct sur le navigateur). Le serve-mode est local, et permet la prévisualisation des modifs en temps reel pdt le dvp du site.
+  
+  
 ## VOCABULAIRE
 
 | **Vocab** |  |
@@ -37,5 +72,6 @@ npm pkg set type = "module"
 | module | Des morceaux / templates de code Javascript qui peuvent être importés et exportés entre différents fichiers. Permet de structurer le code de manière plus organisé. |
 | ESM  | La spécificité standard de Javascript. Les modules ECMAScript (ESM) sont une façon moderne de gérer les dépendances et l'organisation du code en Javascript |
 | Syntaxe Import / Export | La manière dont on inclu des modules dans le code. <br> ex : `import {mafonction} from './monModule.js'` <br> `{mafonction}` : permet d'importer une fonction depuis un autre fichier (`./monModule.js`) |
+| npx | un outil qui vient avec npm, permet d'executer des paquets Nodes.js sans avoir à les installer globalement sur la machine |
 
 
