@@ -105,6 +105,6 @@ jobs:
 
 Dans le layout 
 Remplacement de :  
-`<link rel="stylesheet" href="/_includes/css/style.css">`
+`<link rel="stylesheet" href="/_includes/css/style.css">`  
 par :  
 `<link rel="stylesheet" href="{{ '/_includes/css/style.css' | url }}">`
