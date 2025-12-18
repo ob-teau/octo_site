@@ -105,9 +105,13 @@ jobs:
 
 Dans le layout `octo_site/src/_includes/templates/base.njk`  
 Remplacement de :  
-`<link rel="stylesheet" href="/_includes/css/style.css">`  
+```
+<link rel="stylesheet" href="/_includes/css/style.css">
+```  
 par :  
-`<link rel="stylesheet" href="{{ '/_includes/css/style.css' | url }}">`
+```
+<link rel="stylesheet" href="{{ '/_includes/css/style.css' | url }}">
+```
   
   
 ainsi que :  
