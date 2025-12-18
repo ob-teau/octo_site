@@ -103,8 +103,49 @@ jobs:
   
 ## III - Layout/Template
 
-Dans le layout `
+Dans le layout `octo_site/src/_includes/templates/base.njk`  
 Remplacement de :  
 `<link rel="stylesheet" href="/_includes/css/style.css">`  
 par :  
 `<link rel="stylesheet" href="{{ '/_includes/css/style.css' | url }}">`
+  
+  
+ainsi que :  
+```
+      <a href="/">Accueil</a>
+      <a href="/Anim/">Animations</a>
+      <a href="/BTS/">Behind the scenes</a>
+      <a href="/Projects/">Projets</a>
+      <a href="/Forum/">Forum</a>
+```
+par  
+```
+      <a href="{{ '/' | url }}">Accueil</a>
+      <a href="{{ '/Anim/' | url }}">Animations</a>
+      <a href="{{ '/BTS/' | url }}">Behind the scenes</a>
+      <a href="{{ '/Projects/' | url }}">Projets</a>
+      <a href="{{ '/Forum/' | url }}">Forum</a>
+```
+  
+* Changer ainsi la syntaxe (mettre le filtre `url`) permet de garantir que les URLs générées sont compatibles avec le **préfixe de chemin** défini dans la confif Eleventy. Le filtre `url` comporte l'avantage d'assurer que tous les chemins soit cohérents et adaptés, évitants les liens cassés su le préfixe change ou si le site est réorganisé.  
+* Il est important d'écrire TOUS les liens avec le filtre `url`. 
+  
+
+## IV - Github Pages
+
+### 1. Personal Access Token
+  
+* Tout d'abord, créer un ACCESS-TOKEN en allant dans les `settings` du répo, puis `Developper Settings`, puis `personal access tokens`.  
+* Puis, ajouter le Personal Access Token (PAT) en tant que secret dans les paramètres du répo GIT : Dans `settings` du répo, puis `Secrets and variables`, `Actions` et enfin `New repository secret`. Il ne reste plus qu'à remplir le nom du secret  et coller le PAT dans le champs de texte puis enregistrer.  
+* Cela permet de sécuriser les actions automatisées (comme les déploiements). Cela permet aux workflows d'accéder aux ressources privées ou d'effectuer des actions sur le répo sans que le token ne soit visible dans le code (renforçant ainsi la sécurité). 
+  
+### 2. Config Github Pages
+
+* Dans les `settings` du répo à nouveau, puis dans `pages` : on choisi la source `deploy from a branch`. On passe en suite à `gh-pages` > `/(root)` et on save.
+
+### 3. Test
+
+* Pour tester que tout cela fonctionne, il suffit de faire un changement dans le code (changer le texte dans index.html par exemple) puis `git add`, `git commit -m ""` et `git push` le changement.
+* Sur la page GIT du répo, aller dans le tab `Actions`. On y trouve les workflows (ensembles de tâches automatisées définies dans GitHub Actions). Si les changements ont bien été validés, une pastille verte accompagnera le workflow. Elle sera Orange si le workflow est en attente et rouge s'il à échoué.
+* Le site est normalement déployé sur : `https://myname.github.io/repo_nape/`  
+Ici : `https://ob-teau.github.io/octo_site/`
