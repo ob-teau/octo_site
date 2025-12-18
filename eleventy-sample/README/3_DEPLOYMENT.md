@@ -2,10 +2,10 @@
 
 | **Table des Matières** |
 |------------------------|
-| [I - package.json](#I---package.json) |
+| [I - package.json](#I---packagejson) |
 | [II - Workflow](#II---Workflow) |
-| [III - Layout/Template](#III---Layout/Template) |
-| [IV - Github Pages](IV---Github-Pages) |
+| [III - Layout/Template](#III---LayoutTemplate) |
+| [IV - Github Pages](#IV---Github-Pages) |
   
 
 
