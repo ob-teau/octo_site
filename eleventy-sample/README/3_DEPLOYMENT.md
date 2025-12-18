@@ -103,7 +103,7 @@ jobs:
   
 ## III - Layout/Template
 
-Dans le layout 
+Dans le layout `
 Remplacement de :  
 `<link rel="stylesheet" href="/_includes/css/style.css">`  
 par :  
